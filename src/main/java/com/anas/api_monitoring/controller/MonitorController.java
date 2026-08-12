@@ -3,6 +3,8 @@ package com.anas.api_monitoring.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,4 +25,10 @@ public class MonitorController {
     public List<Monitor> getMonitors() {
         return monitorService.getAllMonitors();
     }
+
+    @PostMapping
+    public Monitor createMonitor(@RequestBody Monitor monitor) {
+        return monitorService.createMonitor(monitor);
+    }
+
 }

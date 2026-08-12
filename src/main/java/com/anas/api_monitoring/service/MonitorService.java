@@ -19,4 +19,8 @@ public class MonitorService {
     public List<Monitor> getAllMonitors() {
         return monitorRepository.findAll();
     }
+
+    public Monitor createMonitor(Monitor monitor) {
+    return monitorRepository.save(monitor);
+    }
 }
