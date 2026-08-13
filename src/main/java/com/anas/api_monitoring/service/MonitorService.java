@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.anas.api_monitoring.exception.MonitorNotFoundException;
 import com.anas.api_monitoring.model.Monitor;
 import com.anas.api_monitoring.repository.MonitorRepository;
 
@@ -22,5 +23,10 @@ public class MonitorService {
 
     public Monitor createMonitor(Monitor monitor) {
     return monitorRepository.save(monitor);
+    }
+
+    public Monitor getMonitorById(Long id) {
+    return monitorRepository.findById(id)
+            .orElseThrow(() -> new MonitorNotFoundException(id));
     }
 }
