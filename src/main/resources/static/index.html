@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Monitor</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">API Monitor</div>
+
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <button id="getStartedBtn">Get Started</button>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">API MONITORING & UPTIME</p>
+
+            <h1>
+                Know when your APIs
+                <span>go down.</span>
+            </h1>
+
+            <p class="hero-description">
+                Monitor API uptime, response time, and availability
+                from one simple dashboard.
+            </p>
+
+            <div class="hero-actions">
+                <button id="heroButton">Start Monitoring</button>
+                <a href="#features">Explore Features</a>
+            </div>
+        </div>
+
+        <div class="status-card">
+            <div class="status-header">
+                <span>API Status</span>
+                <span class="online">● All Systems Operational</span>
+            </div>
+
+            <div class="monitor">
+                <div>
+                    <strong>GitHub API</strong>
+                    <small>api.github.com</small>
+                </div>
+
+                <div class="monitor-status">
+                    <span class="dot"></span>
+                    <span>142 ms</span>
+                </div>
+            </div>
+
+            <div class="monitor">
+                <div>
+                    <strong>Product API</strong>
+                    <small>api.example.com</small>
+                </div>
+
+                <div class="monitor-status">
+                    <span class="dot"></span>
+                    <span>87 ms</span>
+                </div>
+            </div>
+
+            <div class="uptime">
+                <span>Overall Uptime</span>
+                <strong>99.98%</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <p class="eyebrow">FEATURES</p>
+        <h2>Everything you need to monitor an API.</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="icon">↗</div>
+                <h3>Uptime Monitoring</h3>
+                <p>
+                    Automatically check your APIs and know when
+                    they become unavailable.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">◷</div>
+                <h3>Response Time</h3>
+                <p>
+                    Track how quickly your APIs respond to requests
+                    and identify performance issues.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">!</div>
+                <h3>Incident Detection</h3>
+                <p>
+                    Detect failures and keep a history of API
+                    incidents and recoveries.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <p class="eyebrow">BUILT WITH SPRING BOOT</p>
+        <h2>A monitoring system built for learning real backend engineering.</h2>
+
+        <p>
+            API Monitor is a project focused on learning Spring Boot,
+            REST APIs, PostgreSQL, scheduled jobs, monitoring,
+            and backend architecture.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© <span id="year"></span> API Monitor</p>
+</footer>
+
+<script src="/script.js"></script>
+
+</body>
+</html>
