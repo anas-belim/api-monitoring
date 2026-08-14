@@ -42,4 +42,12 @@ public class MonitorService {
 
     return monitorRepository.save(existingMonitor);
     }
+
+    public void deleteMonitor(Long id) {
+
+    Monitor existingMonitor = monitorRepository.findById(id)
+            .orElseThrow(() -> new MonitorNotFoundException(id));
+
+    monitorRepository.delete(existingMonitor);
+}
 }
