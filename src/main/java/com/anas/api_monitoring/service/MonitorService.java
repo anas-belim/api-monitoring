@@ -29,4 +29,17 @@ public class MonitorService {
     return monitorRepository.findById(id)
             .orElseThrow(() -> new MonitorNotFoundException(id));
     }
+
+    public Monitor updateMonitor(Long id, Monitor updatedMonitor) {
+
+        Monitor existingMonitor = monitorRepository.findById(id)
+                .orElseThrow(() -> new MonitorNotFoundException(id));
+
+        existingMonitor.setName(updatedMonitor.getName());
+        existingMonitor.setUrl(updatedMonitor.getUrl());
+        existingMonitor.setMethod(updatedMonitor.getMethod());
+        existingMonitor.setIntervalSeconds(updatedMonitor.getIntervalSeconds());
+
+    return monitorRepository.save(existingMonitor);
+    }
 }
