@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.anas.api_monitoring.dto.MonitorRequest;
 import com.anas.api_monitoring.model.Monitor;
 import com.anas.api_monitoring.service.MonitorService;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/monitors")
@@ -31,8 +34,8 @@ public class MonitorController {
     }
 
     @PostMapping
-    public Monitor createMonitor(@RequestBody Monitor monitor) {
-        return monitorService.createMonitor(monitor);
+    public Monitor createMonitor(@Valid @RequestBody MonitorRequest request) {
+        return monitorService.createMonitor(request);
     }
 
     @GetMapping("/{id}")
